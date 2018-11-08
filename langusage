@@ -1,0 +1,13 @@
+Dear all,
+I am writing about the EAD-level langusage. When a EAD file is ingested where this piece of information is absent, the portal takes langusage=ENG as default value.
+Would it be possible to modify it? I am striving with EADs from Italy and France with no langusage, but written in ITA and FRE.
+I might suggest such a parameter:
+
+if an EAD is ingested in Italy and has no langusage, default langusage will be ITA;
+if an EAD is ingested in France and has no langusage, default langusage will be FRA;
+if an EAD is ingested in the Netherlands and has no langusage, default langusage will be DUT
+
+Another option would be, to allow the langusage to be chosen explicitly at ingest time. However, we have to make sure that this parameter appears both in the user-interface ingest button, and in the ingest tool.
+Also, what if we simply write in the property file
+
+"FRE"=languageCode ?
